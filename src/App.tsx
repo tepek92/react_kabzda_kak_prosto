@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {Rating, ValueType} from "./components/Rating/Rating";
+import {Accordion} from "./components/Accordion/Accordion";
+import {PageTitle} from "./components/PageTitle/PageTitle";
+import {UncontrolledOnOff} from "./components/UncontrolledOnOf/UncontrolledOnOff";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import {OnOff} from "./components/OnOf/OnOff";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [ratingValue, setRatingValue] = useState<ValueType>(0);
+    const [collapsed, setCollapsed] = useState<boolean>(false);
+    const [on, setOn] = useState<boolean> (false);
+
+    const onClickCollapsed = () => {
+        setCollapsed(!collapsed);
+    }
+    const onChangeOnOf = (on: boolean) => {
+        setOn(on);
+    }
+
+
+    return (
+        <div className="App">
+            {/*<PageTitle title={"This is APP component"} />*/}
+            {/*<PageTitle title={"My friends"} />*/}
+            {/*Article 1*/}
+            {/*<Rating value={3}/>*/}
+            {/*Article 2*/}
+            {/*<Accordion title={"User"} collapsed={false}/>*/}
+            {/*<Accordion title={"Menu"} collapsed={collapsed} onClickCollapsed={onClickCollapsed}/>*/}
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <UncontrolledRating />
+            <OnOff on={on} onChangeOnOf={onChangeOnOf}/>
+            {/*<UncontrolledOnOff onChangeOnOf={onChangeOnOf}/> {on.toString()}*/}
+
+
+            {/*<UncontrolledAccordion title={"Menu"}/>*/}
+            {/*<UncontrolledAccordion title={"User"}/>*/}
+            {/*<UncontrolledRating />*/}
+
+        </div>
+    );
 }
 
 export default App;

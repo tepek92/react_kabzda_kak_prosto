@@ -1,5 +1,5 @@
 import React, {memo, MouseEvent} from "react";
-import {ItemsType} from "../Select";
+import {ItemsType} from "../SelectWithMemo";
 import s from "./SelectBody.module.css"
 
 

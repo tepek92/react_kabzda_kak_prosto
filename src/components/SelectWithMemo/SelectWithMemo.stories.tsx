@@ -71,7 +71,7 @@ export const SelectsWithMemo = () => {
         <SelectWithMemo items={visitedFilter} onClick={onClick3} value={value3}/>
         Счетчик
         <button onClick={onClick}>{count}</button>
-        Переворнуть пользователей
+        Перевернуть пользователей
         <button onClick={reverseItems}>Жмяк!</button>
 
     </div>

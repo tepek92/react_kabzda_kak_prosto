@@ -1,7 +1,7 @@
 import React, {memo, useState} from "react";
 
 export default {
-    title: 'Example/ReactMemoTest',
+    title: 'ReactMemoTest',
 }
 
 type UsersPropsType = {

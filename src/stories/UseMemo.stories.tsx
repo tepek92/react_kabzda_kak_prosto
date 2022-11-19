@@ -1,7 +1,7 @@
 import React, {useMemo, useState} from "react";
 
 export default {
-    title: 'Example/useMemoTest',
+    title: 'UseMemoTest',
 }
 
 

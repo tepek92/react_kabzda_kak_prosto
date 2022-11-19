@@ -1,7 +1,7 @@
 import React, {memo, useCallback, useMemo, useState} from "react";
 
 export default {
-    title: 'Example/UseCallback',
+    title: 'UseCallback',
 }
 
 type BooksPropsType = {

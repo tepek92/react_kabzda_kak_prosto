@@ -1,7 +1,7 @@
 import React, {ChangeEvent, useRef, useState} from 'react';
 
 export default {
-    title: 'Example/Standart input',
+    title: 'Standart input',
     // component: "input",
 }
 

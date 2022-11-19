@@ -1,7 +1,7 @@
-import React, {memo, useMemo, useState} from "react";
+import React, {useMemo, useState} from "react";
 
 export default {
-    title: 'Example/UseStatePlus',
+    title: 'Use State Plus',
 }
 
 const generate = () => {

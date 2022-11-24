@@ -5,18 +5,20 @@ export default {
 }
 
 export function UseEffectSetTimeout() {
-    console.log('rendering');
+    // console.log('rendering');
 
     const [time, setTime] = useState('');
 
-
     useEffect(() => {
-        console.log('tik')
 
-        setInterval(() => {
+        const id = setInterval(() => {
+            console.log('tik')
+
             const time = new Date();
             setTime(time.toLocaleTimeString())
         }, 1000);
+
+        return () => clearInterval(id);
     }, []);
 
     return (
